@@ -38,7 +38,12 @@ function App() {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
   return (
-    
+    <div
+    className="w-full h-screen flex flex-items-center justify-content  items-center bg-cover bg-no-repeat "
+    style={{
+        backgroundImage: `url('protection-concept-with-lock (1).jpg')`,
+    }}
+>
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className='text-white text-center my-3'>Password generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
@@ -92,21 +97,10 @@ function App() {
       </div>
     </div>
 </div>
+</div>
     
   )
 }
 
 export default App
-//useref is bascially used for refernce 
-//setpassowrd is used for selection of password when u copy it for better user experience
-//window.navigator.clipboard.writeText(password)
-//}, [password]) is basicaaly used to co[y the password to clipboard.
-//callback hook is used for optimization when any dependency is changed the setpassword should be changed but also optimized.
-// all are stored in cache for re rendering
-//the useeffect is used when anything of the dependency changes we need to reload the and change the passowrd.
-//    passwordRef.current?.setSelectionRange(0, 999); is used to only select the selected range
-//agar hum callback main dependency main assword denge setpassword ke jagah to voh harbaar change krta rehga ,infinite loop man chale jayenge
-//useeffect jab bbhi page load hota h ,toh sabse phle yeh call hunda h,agagr dependncy main kuch change hua toh fer se rerun hojayega
-//passowrd ref s used for reference so that mainuplations can be made we pass passswordrefin{ref}
-
 
